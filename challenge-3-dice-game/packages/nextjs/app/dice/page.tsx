@@ -51,6 +51,7 @@ const DiceGame: NextPage = () => {
   const { data: prize } = useScaffoldReadContract({
     contractName: "DiceGame",
     functionName: "prize",
+    watch: true
   });
 
   const { data: rollsHistoryData, isLoading: rollsHistoryLoading } = useScaffoldEventHistory({
